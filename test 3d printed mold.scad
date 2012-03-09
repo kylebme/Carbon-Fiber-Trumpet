@@ -5,8 +5,8 @@ boreRadius = 5.55625;
 rotateRadius = 31.75;
 
 difference() {
-	translate(v=[0,0,-6.35])
-		cube(size=[88.9,88.9,12.7],center=true);
+	translate(v=[0,0,-4.7625])
+		cube(size=[88.9,88.9,9.525],center=true);
 	
 	difference() {
 		rotate_extrude(convexity = 10, $fn = 300)
@@ -31,5 +31,5 @@ difference() {
 		cylinder(r=3.1,h=14,center=true);
 	rotate(a=[45,0,0])
 		translate([0,50,-50])
-			cube(size=[40,50,50],center=true);
+			cube(size=[40,45,50],center=true);
 }
