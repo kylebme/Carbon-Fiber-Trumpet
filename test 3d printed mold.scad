@@ -1,12 +1,13 @@
 // 3d printed carbon fiber mold test
 // beak90
 // all measurements in millimeters
-boreRadius = 5.55625;
+boreRadius = 6.35;
 rotateRadius = 31.75;
+matThick = 12.7;
 
 difference() {
-	translate(v=[0,0,-4.7625])
-		cube(size=[88.9,88.9,9.525],center=true);
+	translate(v=[0,0,-matThick/2])
+		cube(size=[88.9,88.9,matThick],center=true);
 	
 	difference() {
 		rotate_extrude(convexity = 10, $fn = 300)
@@ -24,11 +25,11 @@ difference() {
 		translate(v=[-rotateRadius,0,-44.46])
 			cylinder(r=boreRadius, h=44.47, $fn=100);
 	translate([0,20,-7])
-		cylinder(r=3.1,h=14,center=true);
+		cylinder(r=3.175,h=14,center=true, $fn=50);
 	translate([35,-35,-7])
-		cylinder(r=3.1,h=14,center=true);
+		cylinder(r=3.175,h=14,center=true, $fn=50);
 	translate([-35,-35,-7])
-		cylinder(r=3.1,h=14,center=true);
+		cylinder(r=3.175,h=14,center=true, $fn=50);
 	rotate(a=[45,0,0])
 		translate([0,50,-50])
 			cube(size=[40,45,50],center=true);

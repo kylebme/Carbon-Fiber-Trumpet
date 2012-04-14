@@ -1,0 +1,1 @@
+rotate_extrude(file="belloutline.dxf", layer="0", $fn=250);
