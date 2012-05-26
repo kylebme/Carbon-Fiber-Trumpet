@@ -10,9 +10,9 @@ difference() {
 		cube(size=[88.9,88.9,matThick],center=true);
 	
 	difference() {
-		rotate_extrude(convexity = 10, $fn = 300)
+		rotate_extrude(convexity = 10, $fn = 100)
 			translate([rotateRadius, 0, 0])
-				circle(r = boreRadius, $fn = 100);
+				circle(r = boreRadius, $fn = 50);
 
 		translate(v=[-44.45,0,-7.5])
 			cube(size=[88.9,44.45,15]);
@@ -20,10 +20,10 @@ difference() {
 	
 	rotate(a=[90,0,0])
 		translate(v=[rotateRadius,0,-44.46])
-			cylinder(r=boreRadius, h=44.47, $fn=100);
+			cylinder(r=boreRadius, h=44.47, $fn=40);
 	rotate(a=[90,0,0])
 		translate(v=[-rotateRadius,0,-44.46])
-			cylinder(r=boreRadius, h=44.47, $fn=100);
+			cylinder(r=boreRadius, h=44.47, $fn=40);
 	translate([0,20,-7])
 		cylinder(r=3.175,h=14,center=true, $fn=50);
 	translate([35,-35,-7])
